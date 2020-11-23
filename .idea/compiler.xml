@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ktc_article" />
+        <module name="ktc_base" />
+        <module name="ktc_common" />
+        <module name="ktc_qa" />
+        <module name="ktc_recruit" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

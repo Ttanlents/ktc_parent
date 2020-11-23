@@ -1,0 +1,17 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: ktc-base       # 微服务名称
+  datasource: # 数据源
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.190.130:3306/ktc_base?characterEncoding=UTF8&useSSL=false
+    username: root
+    password: 12345678
+  jpa:  # Jpa配置
+    database: MySQL  # 数据库类型
+    show-sql: true # 打印SQL语句
+    generate-ddl: true # 自动建表
+    properties:
+      hibernate:
+        format_sql: true

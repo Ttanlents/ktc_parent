@@ -3,7 +3,7 @@ package com.ktc.base;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import utils.IdWorker;
+import util.IdWorker;
 
 /**
  * @author 余俊锋
