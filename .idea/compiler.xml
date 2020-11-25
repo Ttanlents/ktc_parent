@@ -11,6 +11,15 @@
         <module name="ktc_common" />
         <module name="ktc_qa" />
         <module name="ktc_recruit" />
+        <module name="ktc_search" />
+        <module name="ktc_spit" />
+        <module name="ktc_user" />
+      </profile>
+      <profile name="Annotation profile for ktc_parent" enabled="true">
+        <sourceOutputDir name="../ktc_user/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../ktc_user/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ktc_gathering" />
       </profile>
     </annotationProcessing>
   </component>

@@ -3,6 +3,7 @@ package com.ktc.article.service;
 import com.ktc.article.dao.ArticleDao;
 import com.ktc.article.pojo.Article;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.jpa.domain.Specification;
@@ -31,6 +32,9 @@ public class ArticleService {
 
 	@Autowired
 	private IdWorker idWorker;
+
+	/*@Autowired
+	RedisTemplate redisTemplate;*/
 
 	/**
 	* 查询全部列表
@@ -68,7 +72,16 @@ public class ArticleService {
 	* @param id
 	* @return
 	*/
+	@Cacheable(value ="find_article",key ="'article'+#id" )
 	public Article findById(String id) {
+		/*ValueOperations ops = redisTemplate.opsForValue();
+		Article article = (Article)ops.get("article:" + id);
+		if (article==null){
+			Article a = articleDao.findById(id).get();
+			ops.set("article:" + id,a,60, TimeUnit.SECONDS);
+			return a;
+		}
+		return  article;*/
 		return articleDao.findById(id).get();
 	}
 
@@ -77,7 +90,7 @@ public class ArticleService {
 	* @param article
 	*/
 	public void add(Article article) {
-		article.setId( idWorker.nextId()+"" );
+		/*article.setId( idWorker.nextId()+"" );*/
 		articleDao.save(article);
 	}
 
@@ -86,6 +99,8 @@ public class ArticleService {
 	* @param article
 	*/
 	public void update(Article article) {
+		/*ValueOperations ops = redisTemplate.opsForValue();
+		ops.set("article:"+article.getId(),article,60,TimeUnit.SECONDS);*/
 		articleDao.save(article);
 	}
 
@@ -94,6 +109,7 @@ public class ArticleService {
 	* @param id
 	*/
 	public void deleteById(String id) {
+		/*redisTemplate.delete("article:"+id);*/
 		articleDao.deleteById(id);
 	}
 

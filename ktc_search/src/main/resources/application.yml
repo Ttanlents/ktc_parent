@@ -1,0 +1,8 @@
+server:
+  port: 9007
+spring:
+  application:
+    name: ktc-search  #微服名称
+  data:
+    elasticsearch:
+      cluster-nodes: 127.0.0.1:9300   #单节点，逗号分开多节点

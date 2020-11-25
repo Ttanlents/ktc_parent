@@ -34,6 +34,11 @@ public class Article implements Serializable{
 	private String url; //URL
 	private String type; //类型
 
+
+
+
+
+
 	public String getId() {
 		return this.id;
 	}

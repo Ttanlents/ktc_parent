@@ -20,5 +20,8 @@ public class ArticleApplication {
 	public IdWorker idWorker(){
 		return new IdWorker();
 	}
+
+
+
 	
 }

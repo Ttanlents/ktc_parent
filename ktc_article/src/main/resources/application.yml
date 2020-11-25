@@ -13,3 +13,9 @@ spring:
       hibernate:
         format_sql: true	# 格式化sql
         show_sql: true		# 显示sql
+  redis:
+    password:
+    jedis:
+      pool:
+        max-idle: 3
+    host: 192.168.190.130
