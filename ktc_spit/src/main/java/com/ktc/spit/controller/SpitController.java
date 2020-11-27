@@ -3,7 +3,7 @@ package com.ktc.spit.controller;
 import com.ktc.spit.entity.Spit;
 import com.ktc.spit.service.SpitService;
 import entity.PageResult;
-import entity.Result;
+import entity.*;
 import entity.StatusCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

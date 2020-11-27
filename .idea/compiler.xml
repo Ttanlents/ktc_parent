@@ -9,18 +9,20 @@
         <module name="ktc_article" />
         <module name="ktc_base" />
         <module name="ktc_common" />
+        <module name="ktc_eureka" />
+        <module name="ktc_friend" />
+        <module name="ktc_gathering" />
         <module name="ktc_qa" />
         <module name="ktc_recruit" />
         <module name="ktc_search" />
+        <module name="ktc_sms" />
         <module name="ktc_spit" />
-        <module name="ktc_user" />
-      </profile>
-      <profile name="Annotation profile for ktc_parent" enabled="true">
-        <sourceOutputDir name="../ktc_user/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../ktc_user/target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="ktc_gathering" />
+        <module name="ktc_users" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ktc_fridend" target="1.8" />
+      <module name="ktc_user" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

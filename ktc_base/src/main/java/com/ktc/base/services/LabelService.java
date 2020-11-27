@@ -1,7 +1,7 @@
 package com.ktc.base.services;
 
 import com.ktc.base.dao.LabelDao;
-import entity.Label;
+import com.ktc.base.entity.Label;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

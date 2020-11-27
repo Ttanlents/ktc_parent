@@ -1,8 +1,9 @@
 package com.ktc.qa.controller;
 
+import entity.PageResult;
+import com.ktc.qa.client.LabelClient;
 import com.ktc.qa.pojo.Problem;
 import com.ktc.qa.service.ProblemService;
-import entity.PageResult;
 import entity.Result;
 import entity.StatusCode;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -134,6 +135,20 @@ public class ProblemController {
     public Result waitlist(@PathVariable String labelid,@PathVariable Integer page,@PathVariable Integer size) {
         Page<Problem> pageDate=  problemService.waitlist(labelid,page,size);
         return new Result(StatusCode.OK, true, "查询热门问题列表成功！",new PageResult<>(pageDate.getTotalElements(),pageDate.getContent()));
+    }
+
+    @Autowired
+    private LabelClient labelClient;
+    /**
+     *服务调用
+    * @param labelid
+    */
+    @RequestMapping(value = "/label/{labelid}",method = RequestMethod.GET)
+    public Result findLabelByLabelId(@PathVariable String labelid){
+
+        Result result = labelClient.findById(labelid);
+
+        return result;
     }
 
 

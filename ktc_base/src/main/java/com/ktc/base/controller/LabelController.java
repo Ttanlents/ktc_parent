@@ -1,9 +1,7 @@
 package com.ktc.base.controller;
 
-import entity.Label;
-import entity.PageResult;
-import entity.Result;
-import entity.StatusCode;
+import com.ktc.base.entity.Label;
+import entity.*;
 import com.ktc.base.services.LabelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

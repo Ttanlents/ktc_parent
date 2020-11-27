@@ -2,6 +2,7 @@ package com.ktc.base.controller;
 
 import entity.Result;
 import entity.StatusCode;
+import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @date 2020/11/23 11:00
  * @Description
  */
-//@ControllerAdvice
+@ControllerAdvice
 public class GlobalExceptionHandler {
 
 

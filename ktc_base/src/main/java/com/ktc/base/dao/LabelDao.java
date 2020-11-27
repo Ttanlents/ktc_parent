@@ -1,6 +1,6 @@
 package com.ktc.base.dao;
 
-import entity.Label;
+import com.ktc.base.entity.Label;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 

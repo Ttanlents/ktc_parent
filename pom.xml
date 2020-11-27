@@ -15,10 +15,16 @@
         <module>ktc_qa</module>
         <module>ktc_article</module>
         <module>ktc_gathering</module>
-        <module>ktc_search</module>
         <module>ktc_spit</module>
-        <module>ktc_user</module>
+        <module>ktc_search</module>
+        <module>ktc_users</module>
+        <module>ktc_sms</module>
+        <module>ktc_eureka</module>
+        <module>ktc_friend</module>
+
+
     </modules>
+
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -43,7 +49,15 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!--  mysql驱动-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.47</version>
+        </dependency>
+
     </dependencies>
+
 
     <repositories>
         <repository>
@@ -83,4 +97,17 @@
         </pluginRepository>
     </pluginRepositories>
 
+
+    <!--锁定spring-cloud版本-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Finchley.M9</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>

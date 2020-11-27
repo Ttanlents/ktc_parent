@@ -2,9 +2,7 @@ package com.ktc.article.controller;
 
 import com.ktc.article.pojo.Article;
 import com.ktc.article.service.ArticleService;
-import entity.PageResult;
-import entity.Result;
-import entity.StatusCode;
+import entity.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;

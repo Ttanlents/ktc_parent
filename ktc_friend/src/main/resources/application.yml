@@ -1,0 +1,28 @@
+server:
+  port: 9010
+spring:
+  application:
+    name: ktc-friend
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.190.130:3306/ktc_friend?characterEncoding=utf-8
+    username: root
+    password: 12345678
+  jpa:
+    database: mysql
+    show-sql: true
+    generate-ddl: true
+    properties:
+      hibernate:
+        format_sql: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10101/eureka
+  instance:
+    prefer-ip-address: true
+
+jwt:
+  config:
+    key: dfbz
+    prefix: dfbz_

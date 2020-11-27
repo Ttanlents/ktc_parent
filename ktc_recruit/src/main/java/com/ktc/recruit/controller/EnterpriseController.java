@@ -1,8 +1,8 @@
 package com.ktc.recruit.controller;
 
-import entity.PageResult;
-import entity.Result;
-import entity.StatusCode;
+import com.ktc.base.entity.PageResult;
+import com.ktc.base.entity.Result;
+import com.ktc.base.entity.StatusCode;
 import com.ktc.recruit.pojo.Enterprise;
 import com.ktc.recruit.service.EnterpriseService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -4,9 +4,9 @@
 	<variables>
 		<variable name="developer" value="admin" /><!-- 作者 第一步-->
 		<variable name="company" value="东方标准" /><!-- 公司名 -->
-		<variable name="system" value="gathering"/><!-- 包名，例如：com.ktc.base -->
+		<variable name="system" value="friend"/><!-- 包名，例如：com.ktc.base -->
 		<variable name="domain" value="com.ktc"/>
-		<variable name="startName" value="Gathering"/>		<!-- SpringBoot启动类名称 -->
+		<variable name="startName" value="Friend"/>		<!-- SpringBoot启动类名称 -->
 		<variable name="email" value="10001@qq.com"/><!-- 公司邮箱 -->
 	</variables>
 
@@ -23,7 +23,7 @@
 	</templates>
 
 	<!-- 第二步 生成的文件存放路径 建议放到一个空目录下  避免不熟悉覆盖了代码文件-->
-	<files baseDir="C:\Users\FT\IdeaProjects\ktc_parent\ktc_user" >
+	<files baseDir="C:\Users\FT\IdeaProjects\ktc_parent\ktc_friend" >
 		<file refTemplate="dao" filename="{class}Dao.java" dir="src\main\java\com\ktc\{system}\dao" sub="true"  override="true"/>
 		<file refTemplate="pojo" filename="{class}.java" dir="src\main\java\com\ktc\{system}\pojo" sub="true"  override="true"/>
 		<file refTemplate="service" filename="{class}Service.java" dir="src\main\java\com\ktc\{system}\service" sub="false"  override="true"/>
@@ -35,9 +35,9 @@
 	</files>
 
 	<!-- 数据库表名  第三步-->
-	<table tableName="tb_user">
+	<table tableName="tb_nofriend">
 		<!-- 类名 -->
-		<variable name="class" value="User" />
+		<variable name="class" value="NoFriend" />
 		<!-- 设为空即可-->
 		<variable name="package" value="" />
 	</table>

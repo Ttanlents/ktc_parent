@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ktc.article.pojo.Channel;
 import com.ktc.article.service.ChannelService;
 
-import entity.PageResult;
-import entity.Result;
-import entity.StatusCode;
+import com.ktc.base.entity.PageResult;
+import com.ktc.base.entity.Result;
+import com.ktc.base.entity.StatusCode;
 
 /**
 * @Description 频道 控制器层

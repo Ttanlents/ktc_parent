@@ -2,6 +2,8 @@ package com.ktc.qa.service;
 
 import com.ktc.qa.dao.ProblemDao;
 import com.ktc.qa.pojo.Problem;
+import entity.*;
+import io.jsonwebtoken.Claims;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -14,6 +16,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
+import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -31,6 +34,8 @@ public class ProblemService {
 
 	@Autowired
 	private IdWorker idWorker;
+	@Autowired
+	HttpServletRequest request;
 
 	/**
 	* 查询全部列表
@@ -76,9 +81,14 @@ public class ProblemService {
 	* 增加
 	* @param problem
 	*/
-	public void add(Problem problem) {
+	public Result add(Problem problem) {
+		Claims claims_user = (Claims)request.getAttribute("claims_user");
+		if (claims_user==null){
+			return new Result(StatusCode.ACCESS_ERROR,false,"请先登录");
+		}
 		problem.setId( idWorker.nextId()+"" );
 		problemDao.save(problem);
+		return new Result(StatusCode.OK,true,"添加成功");
 	}
 
 	/**

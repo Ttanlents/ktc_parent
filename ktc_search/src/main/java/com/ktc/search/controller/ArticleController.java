@@ -2,9 +2,9 @@ package com.ktc.search.controller;
 
 import com.ktc.search.entity.Article;
 import com.ktc.search.service.ArticleService;
-import entity.PageResult;
-import entity.Result;
-import entity.StatusCode;
+import com.ktc.base.entity.PageResult;
+import com.ktc.base.entity.Result;
+import com.ktc.base.entity.StatusCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;

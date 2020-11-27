@@ -13,3 +13,15 @@ spring:
       hibernate:
         format_sql: true	# 格式化sql
         show_sql: true		# 显示sql
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10101/eureka
+  instance:
+    prefer-ip-address: true     #使用ip区分服务
+
+
+jwt:
+  config:
+    key: dfbz
+    prefix: dfbz_
