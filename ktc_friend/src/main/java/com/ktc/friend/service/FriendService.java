@@ -136,8 +136,8 @@ public class FriendService {
                 friendDao.update(friendid, userId, "0");
             }
             friendDao.delete(friend);
-            userClient.updateFansCount(friendid,-1);
-            userClient.updateFollowCount(userId,-1);
+            userClient.updateFansCount(friendid, -1);
+            userClient.updateFollowCount(userId, -1);
             return false;
         }
 

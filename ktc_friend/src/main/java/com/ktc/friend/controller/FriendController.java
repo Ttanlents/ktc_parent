@@ -121,6 +121,7 @@ public class FriendController {
         String userId = claims.getId();
         Boolean flag = friendService.like(userId, friendid);
         if (flag){
+
             return new Result(StatusCode.OK,true,"加关注成功");
         }
         return new Result(StatusCode.OK,true,"取消关注成功");

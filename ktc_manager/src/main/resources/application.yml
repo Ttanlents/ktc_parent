@@ -1,0 +1,27 @@
+server:
+  port: 9011
+spring:
+  application:
+    name: ktc-manager
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10101/eureka
+  instance:
+    prefer-ip-address: true #使用IP注册而不是主机名(注册多个微服时用IP区分)
+zuul:
+  routes:
+    ktc-base:
+      path: /base/**
+      serviceId: ktc-base
+    ktc-qa:
+      path: /qa/**
+      serviceId: ktc-qa
+    ktc-user:               #路由Key
+      path: /user/**        #配置请求 URL 的请求规则
+      serviceId: ktc-user   #指定 Eureka 注册中心中的服务 id
+
+jwt:
+  config:
+    key: dfbz_      #token秘钥
+    prefix: dfbz_

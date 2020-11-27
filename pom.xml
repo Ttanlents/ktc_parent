@@ -21,6 +21,7 @@
         <module>ktc_sms</module>
         <module>ktc_eureka</module>
         <module>ktc_friend</module>
+        <module>ktc_manager</module>
 
 
     </modules>
