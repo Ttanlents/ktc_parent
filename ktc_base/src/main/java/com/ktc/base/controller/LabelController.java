@@ -4,6 +4,7 @@ import com.ktc.base.entity.Label;
 import entity.*;
 import com.ktc.base.services.LabelService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,6 +19,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/label")
 @CrossOrigin    //端口，协议，域名不同都是跨域
+@RefreshScope  //刷新bus总线 同时 支持自定义的配置的刷新
 public class LabelController {
     @Autowired
     LabelService labelService;

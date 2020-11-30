@@ -10,6 +10,7 @@
         <module name="ktc_article" />
         <module name="ktc_base" />
         <module name="ktc_common" />
+        <module name="ktc_config" />
         <module name="ktc_eureka" />
         <module name="ktc_friend" />
         <module name="ktc_gathering" />
